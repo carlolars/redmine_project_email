@@ -17,7 +17,11 @@ module RedmineProjectEmail
   end
 
   def self.project_email(project)
-    email = Setting.mail_from
+    if Setting.plugin_redmine_project_email['use_custom_email_address']
+      email = Setting.plugin_redmine_project_email['custom_email_address']
+    else
+      email = Setting.mail_from
+    end
     email = email.gsub(/@/, "+#{project.identifier}@")
     mail_to(email, email, subject: "Issue subject", body: "Issue description.")
   end

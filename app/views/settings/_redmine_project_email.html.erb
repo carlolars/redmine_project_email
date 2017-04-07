@@ -4,9 +4,14 @@
 </p>
 
 <p>
-  <%= label_tag('mail_from', l(:setting_mail_from)) %> <%= Setting.mail_from %>
+  <%= label_tag('mail_from', l(:setting_mail_from)) %>
+  <% if Setting.mail_from && !Setting.mail_from.blank? %>
+  <%= Setting.mail_from %>
+  <% else %>
+  <%= l(:setting_mail_from) %> <%= l(:text_not_configured) %>
+  <% end %>
   <em class="info">
-    <%= l(:note_emission_email) %>
+    <%= l(:note_emission_email) %> <%= link_to "#{l(:label_settings)}->#{l(:field_mail_notification)}", "/settings?tab=notifications" %>
   </em>
 </p>
 

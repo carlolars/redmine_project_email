@@ -2,7 +2,8 @@
 en:
   # my_label: "My label"
   label_show_project_email: Show project email on overview
-  note_emission_email: The email address configured in Settings->Email notifications.
+  text_not_configured: not configured
+  note_emission_email: The email address configured in
   label_use_custom_email_address: Use custom email address
   note_use_custom_email_address: Use a custom email address instead of the address configured as emission email address.
   label_custom_email_address: Custom email address
