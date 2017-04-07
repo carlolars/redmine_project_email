@@ -1,4 +1,12 @@
 <p>
   <%= label_tag('Show project email on overview:') %>
   <%= check_box_tag('settings[show_project_email]', true, @settings['show_project_email']) %>
+  </br>
+  <%= label_tag('Default email:') %> <%= Setting.mail_from %>
+  </br>
+  <%= label_tag('Use custom incoming email:') %>
+  <%= check_box_tag('settings[use_custom_incoming_email]', true, @settings['use_custom_incoming_email']) %>
+  </br>
+  <%= label_tag('Custom incoming email:') %>
+  <%= email_field_tag('settings[custom_incoming_email]', @settings['custom_incoming_email']) %>
 </p>

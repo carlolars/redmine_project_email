@@ -1,0 +1,5 @@
+  <% if @trackers.present? && RedmineProjectEmail.show_project_email %>  
+  <div class="box" id="project-email">
+    <strong><%= label_tag('Project email:') %></strong> <%= RedmineProjectEmail.project_email(@project) %>
+  </div>
+  <% end %>

@@ -1,3 +1,5 @@
+require_dependency 'redmine_project_email'
+
 Redmine::Plugin.register :redmine_project_email do
   name 'Redmine Project Email plugin'
   author 'Carl-Oskar Larsson'
@@ -9,6 +11,8 @@ Redmine::Plugin.register :redmine_project_email do
   settings  partial: 'settings/redmine_project_email',
             default:
             {
-              'show_project_email': false
+              'show_project_email': false,
+              'use_custom_incoming_email': false,
+              'custom_incoming_email': ""
             }
 end
