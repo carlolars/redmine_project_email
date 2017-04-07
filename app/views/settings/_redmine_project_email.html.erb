@@ -1,12 +1,21 @@
 <p>
-  <%= label_tag('Show project email on overview:') %>
+  <%= label_tag('settings[show_project_email]', l(:label_show_project_email)) %>
   <%= check_box_tag('settings[show_project_email]', true, @settings['show_project_email']) %>
-  </br>
-  <%= label_tag('Default email:') %> <%= Setting.mail_from %>
-  </br>
-  <%= label_tag('Use custom incoming email:') %>
-  <%= check_box_tag('settings[use_custom_incoming_email]', true, @settings['use_custom_incoming_email']) %>
-  </br>
-  <%= label_tag('Custom incoming email:') %>
-  <%= email_field_tag('settings[custom_incoming_email]', @settings['custom_incoming_email']) %>
+</p>
+
+<p>
+  <%= label_tag('mail_from', l(:setting_mail_from)) %> <%= Setting.mail_from %>
+  <em class="info">
+    <%= l(:note_emission_email) %>
+  </em>
+</p>
+
+<p>
+  <%= label_tag('settings[use_custom_email_address]', l(:label_use_custom_email_address)) %>
+  <%= check_box_tag('settings[use_custom_email_address]', true, @settings['use_custom_email_address']) %>
+  <em class="info">
+    <%= l(:note_use_custom_email_address) %>
+  </em>
+  <%= label_tag('settings[custom_email_address]', l(:label_custom_email_address)) %>
+  <%= email_field_tag('settings[custom_email_address]', @settings['custom_email_address']) %>
 </p>

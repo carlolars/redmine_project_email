@@ -7,7 +7,12 @@ include ActionView::Helpers::UrlHelper
 module RedmineProjectEmail
   def self.show_project_email
     return false unless Setting.plugin_redmine_project_email['show_project_email']
-    return false unless Setting.mail_from && !Setting.mail_from.blank?
+    if Setting.plugin_redmine_project_email['use_custom_email_address']
+      return false unless Setting.plugin_redmine_project_email['custom_email_address'] && !Setting.plugin_redmine_project_email['custom_email_address'].blank?
+    else
+      # Use the 'Emission email address' from 'Settings->Email notifications'
+      return false unless Setting.mail_from && !Setting.mail_from.blank?
+    end
     true
   end
 

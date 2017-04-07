@@ -12,7 +12,7 @@ Redmine::Plugin.register :redmine_project_email do
             default:
             {
               'show_project_email': false,
-              'use_custom_incoming_email': false,
-              'custom_incoming_email': ""
+              'use_custom_email_address': false,
+              'custom_email_address': ""
             }
 end
