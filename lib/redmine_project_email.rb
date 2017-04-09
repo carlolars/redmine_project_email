@@ -1,6 +1,6 @@
 
 # Hooks
-require 'redmine_project_email/hooks/views/view_projects_show_left_hook'
+require_dependency 'redmine_project_email/hooks/view_projects_show_left_hook'
 
 include ActionView::Helpers::UrlHelper
 
