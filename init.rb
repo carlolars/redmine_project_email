@@ -4,9 +4,9 @@ Redmine::Plugin.register :redmine_project_email do
   name 'Redmine Project Email plugin'
   author 'Carl-Oskar Larsson'
   description 'Shows the project email on the project overview page.'
-  version '0.0.1'
-  url 'n/a'
-  author_url 'n/a'
+  version '1.0.0'
+  url 'https://github.com/carlolars/redmine_project_email'
+  author_url 'https://github.com/carlolars'
   
   settings  partial: 'settings/redmine_project_email',
             default:
