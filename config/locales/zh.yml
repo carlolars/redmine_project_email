@@ -1,0 +1,9 @@
+# Simplified Chinese strings go here for Rails i18n
+zh:
+  # my_label: "My label"
+  label_show_project_email: 在概述页面上显示项目电子邮件信息
+  text_not_configured: 未配置
+  note_emission_email: 电子邮件信息配置在
+  label_use_custom_email_address: 使用自定义电子邮件
+  note_use_custom_email_address: 使用自定义电子邮件，而非系统默认的电子邮件
+  label_custom_email_address: 自定义电子邮件
